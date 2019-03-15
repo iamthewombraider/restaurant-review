@@ -134,22 +134,28 @@ nav h1 a {
   align-items: center;
   background-color: #f3f3f3;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
   list-style: outside none none;
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
+  justify-content: center;
+  min-height: 465px;
 }
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
   margin: 15px;
-  min-height: 380px;
+  /*min-height: 380px;*/
+  height: 5%;
   padding: 0 30px 25px;
   text-align: left;
-  max-width: 470px;
-  width: 80%;
+ /*max-width: 470px;*/
+  /*width: 80%;*/
+  min-height: 465px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -209,7 +215,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
@@ -250,7 +256,7 @@ nav h1 a {
 }
 
 #reviews-container {
-  padding: 30px 40px 80px;
+  padding: 30px 20px 80px;
 }
 #reviews-container h2 {
   color: #f58500;
@@ -281,6 +287,13 @@ nav h1 a {
   color: #666;
 }
 
+@media screen and (max-width: 1024px) and (min-width: 801px) {
+  #restaurants-list li {
+  max-width: 15%;
+  width: 15%;
+  }
+}
+
 @media screen and (max-width: 800px) {
   * {
     box-sizing: border-box;
@@ -289,9 +302,7 @@ nav h1 a {
   }
 
  .inside {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  
 }
 
 .inside header {
@@ -302,18 +313,12 @@ nav h1 a {
 }
 
 .inside #maincontent {
+  min-height: initial;
   height: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 300px;
 }
 .inside #map-container {
-  height: 20%;
-  right: initial;
-  top: initial;
-  display: block;
+  height: 90%;
+  top: 140px;
 }
  .inside #restaurant-container {
   height: 20%;
@@ -333,6 +338,7 @@ nav h1 a {
   -moz-box-sizing: border-box;
   
 }
+
   .inside {
   display: flex;
   flex-direction: column;
@@ -402,3 +408,4 @@ nav h1 a {
     width: 100%;
   }
 }
+
