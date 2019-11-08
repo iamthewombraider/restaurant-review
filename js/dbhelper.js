@@ -162,7 +162,7 @@ class DBHelper {
   */
   
   static imageUrlForRestaurant(restaurant) {
-    return (`https://seo-the-platinum.github.io/restaurant-review//img/${restaurant.photograph}`);
+    return (`https://seo-the-platinum.github.io/restaurant-review/img/${restaurant.photograph}`);
   }
   
   static imageAltForRestaurant(restaurant) {
